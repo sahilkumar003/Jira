@@ -1,5 +1,6 @@
 version: "3"
 
+name: "Jira"
 services:
   db:
     image: postgres
@@ -7,17 +8,37 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: Issue_Tracker
+    container_name: postgres
 
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
+    container_name: web
+    image: backend
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: Issue_Tracker
+      PYTHONUNBUFFERED: true
     volumes:
       - .:/app
     ports:
       - "8000:8000"
     depends_on:
       - db
+  frontendapp:
+    build: ./frontend/.
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./frontend/.:/app
+    image: frontendapp
+    command: [ "yarn", "start" ]
+    environment:
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - REACT_APP_BASE_URL=http://localhost:8000
+
+networks:
+  default:
+    name: Jira
