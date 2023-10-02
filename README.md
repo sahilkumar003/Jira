@@ -1,6 +1,6 @@
-# **Issue Tracker System**
+# **JIRA**
 
-Issue Tracker System is an agile project management tool used by teams to plan, track, release, and support world-class software with confidence. This project is a web-based issue tracking system that allows project teams to effectively track and manage their projects. It provides features to create and track project tasks, assign tasks to team members, and monitor task progress in the form of stories.
+JIRA is an agile project management tool used by teams to plan, track, release, and support world-class software with confidence. This project is a web-based issue tracking system that allows project teams to effectively track and manage their projects. It provides features to create and track project tasks, assign tasks to team members, and monitor task progress in the form of stories.
 
 ## **Features**
 
@@ -14,7 +14,7 @@ Issue Tracker System is an agile project management tool used by teams to plan, 
 
 ## **Installation**
 
-1. Clone the repository: **`git clone https://github.com/techlyticaly-induction/issue-tracker-sahil.git`**
+1. Clone the repository: **`https://github.com/sahilkumar003/Jira-Backend.git`**
 2. Create a virtual environment: **`python -m venv env`**
 3. Activate the virtual environment:
    - For Windows: **`env\Scripts\activate`**
@@ -52,16 +52,18 @@ Issue Tracker System is an agile project management tool used by teams to plan, 
 - Python
 - Django
 - Django REST Framework
+- React
 - JavaScript
 - HTML
-- CSS
+- CSS, SCSS
 - Bootstrap
 - PostgreSQL
+- Docker
 
 ## **Contributing**
 
-Contributions to Issue Tracker System are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+Contributions to JIRA are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## **License**
 
-This project is licensed under the **Techlyticaly.**
+This project is licensed under the **Sahil Kumar**
